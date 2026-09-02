@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: pull code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: docker install
         uses: docker/setup-buildx-action@v3
