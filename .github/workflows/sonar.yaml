@@ -1,13 +1,13 @@
 name: Sonar_Code_Check
 on:
-  workflow_dispatch:
-  workflow_call:
-  # push:
-  #   branches:
-  #     - dev
-  #     - deploy
-  # pull_request:
-  #   types: [opened, synchronize, reopened]
+#  workflow_dispatch:
+#  workflow_call:
+  push:
+    branches:
+      - dev
+      - deploy
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   sonarqube:
     name: SonarQube

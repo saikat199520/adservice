@@ -5,14 +5,14 @@ on:
     branches:
       - dev
       - deploy
-  workflow_dispatch:
+  #workflow_dispatch:
 
 jobs:
-  sonar_check:
-    uses: ./.github/workflows/sonar.yaml
+  # sonar_check:
+  #   uses: ./.github/workflows/sonar.yaml
 
   build-push:
-    needs: [sonar_check]
+    #needs: [sonar_check]
     runs-on: ubuntu-24.04-arm
     environment: dev  
 
