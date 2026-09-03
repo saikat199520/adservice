@@ -1,5 +1,6 @@
 name: Sonar_Code_Check
 on:
+  workflow_dispatch:
   workflow_call:
   # push:
   #   branches:

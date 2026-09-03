@@ -5,6 +5,7 @@ on:
     branches:
       - dev
       - deploy
+  workflow_dispatch:
 
 jobs:
   sonar_check:
