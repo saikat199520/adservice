@@ -1,11 +1,10 @@
 name: Sonar_Code_Check
 on:
 #  workflow_dispatch:
-#  workflow_call:
+ workflow_call:
   push:
     branches:
-      - dev
-      - deploy
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
