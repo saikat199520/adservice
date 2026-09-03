@@ -1,16 +1,17 @@
 name: Build Push Image Trigger CI
 
 on:
-  workflow_run:
-    workflows: ["Sonar_Code_Check"]
-    types:
-      - completed
-  workflow_dispatch:
-  # push:
-  #   branches: ["dev"]
+  push:
+    branches:
+      - dev
+      - deploy
 
 jobs:
+  sonar_check:
+    uses: ./.github/workflows/sonar.yaml
+
   build-push:
+    needs: [sonar_check]
     runs-on: ubuntu-24.04-arm
     environment: dev  
 
