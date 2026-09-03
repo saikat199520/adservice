@@ -1,8 +1,13 @@
 name: Build Push Image Trigger CI
 
 on:
-  push:
-    branches: ["dev"]
+  workflow_run:
+    workflows: ["Sonar_Code_Check"]
+    types:
+      - completed
+  workflow_dispatch:
+  # push:
+  #   branches: ["dev"]
 
 jobs:
   build-push:

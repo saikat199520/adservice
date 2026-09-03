@@ -1,4 +1,4 @@
-name: Build
+name: Sonar_Code_Check
 on:
   push:
     branches:
